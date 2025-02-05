@@ -1,26 +1,29 @@
 package Desafio005;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class ContaCorrente extends ContaBancaria {
 
     @Override
     public void consultarSaldo() {
-        System.out.println("Saldo da Conta Corrente: " + saldo);
-        System.out.println("-----------------------------------------");
+        System.out.println("Saldo Atual: " + saldo);
+        System.out.println("---------------------------------");
     }
 
     @Override
     public double depositar(double valor) {
-        System.out.println("Depósito feito com Sucesso!");
-        System.out.println("-----------------------------------------");
-        double depositoCC = valor;
-        saldo += depositoCC;
+        System.out.println("Depósito em Conta Corrente realizado.");
+        System.out.println("---------------------------------");
+        double depositoContaCorrente = valor;
+        saldo += depositoContaCorrente;
         return saldo;
     }
 
     public ContaCorrente(double saldo) {
         super(saldo);
+    }
+
+    //Sobrecarga do Construtor
+    public ContaCorrente(double saldo, TipoConta tipoConta) {
+        super(saldo, tipoConta);
     }
 
 }
