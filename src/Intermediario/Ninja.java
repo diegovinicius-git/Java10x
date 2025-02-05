@@ -11,9 +11,15 @@ public abstract class Ninja implements EstrategiaDeBatalha {
     int numeroDeMissoesConcluidas;
     NivelNinja rank;
 
+
     //Construtor vazio
     public Ninja() {
 
+    }
+
+    // Todo ninja vai fazer obrigatoriamente
+    final void tacarKunai() {
+        System.out.println("Eu sou um método da classe mãe");
     }
 
     //Metodo existente: primeiro metodo
@@ -70,6 +76,8 @@ public abstract class Ninja implements EstrategiaDeBatalha {
     public String toString() {
         return "Meu nome é " + nome + ", eu sou da " + aldeia + " e tenho " + idade + " anos.";
     }
+
+
 
 
 
