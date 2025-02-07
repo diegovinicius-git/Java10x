@@ -15,7 +15,7 @@ public class Uzumaki extends Ninja {
 
     @Override
     public void estrategiaDeBatalhaNinja() {
-        super.estrategiaDeBatalhaNinja();
+        System.out.println("Meu nome é " + nome + " e esse é meu Kage Bushin no Jutsu");
     }
 
 }

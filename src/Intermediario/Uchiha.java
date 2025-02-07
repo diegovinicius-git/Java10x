@@ -2,6 +2,8 @@ package Intermediario;
 
 public class Uchiha extends Ninja implements SharinganInterface {
 
+
+    // -Super- está aqui, porque a classe Uchicha é filha da classe Ninja
     public Uchiha() {
         super();
     }
@@ -24,7 +26,10 @@ public class Uchiha extends Ninja implements SharinganInterface {
                 + numeroDeMissoesConcluidas + " missões.");
     }
 
-    //Vem direto da Interface
+    /*
+    * Metodo:
+    * Implementa da interface Sharingan
+    * */
     @Override
     public void sharinganAtivado() {
         System.out.println(nome + ": Ativou o Sharingan");
