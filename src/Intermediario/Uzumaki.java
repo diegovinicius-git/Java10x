@@ -2,6 +2,8 @@ package Intermediario;
 
 public class Uzumaki extends Ninja {
 
+    Biju biju;
+
     public Uzumaki() {
     }
 
@@ -11,6 +13,14 @@ public class Uzumaki extends Ninja {
 
     public Uzumaki(String nome, String aldeia, int idade, int numeroDeMissoesConcluidas, NivelNinja rank) {
         super(nome, aldeia, idade, numeroDeMissoesConcluidas, rank);
+    }
+
+    /*
+    * Sobrecarga do Construtor
+    * */
+    public Uzumaki(String nome, String aldeia, int idade, int numeroDeMissoesConcluidas, NivelNinja rank, Biju biju) {
+        super(nome, aldeia, idade, numeroDeMissoesConcluidas, rank);
+        this.biju = biju;
     }
 
     @Override
