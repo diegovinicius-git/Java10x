@@ -17,6 +17,8 @@ public class Main {
         linkedList.add("Naruto");
         System.out.println(linkedList);
 
+        System.out.println("Hello, World");
+
 
     }
 }
