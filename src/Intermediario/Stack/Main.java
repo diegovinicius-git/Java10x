@@ -1,9 +1,6 @@
 package Intermediario.Stack;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,39 +8,58 @@ public class Main {
         // Array
         // São estaticos e tem referencia de memoria previa
         System.out.println("----------------- ARRAY -----------------");
-        String[] ninjasArray = new String[3];
-        ninjasArray[0] = "Naruto Uzumaki";
-        ninjasArray[1] = "Sasuke Uchiha";
-        ninjasArray[2] = "Sakura Haruno";
-        System.out.println("Meu Array: " + ninjasArray[2]);
+        String[] ninjasArray = new String[5];
+
 
         // Lista
         // Sao dinamicas e tamanho aumenta e diminui conforme precisa
         // A lista é um pouco mais lenta em comparação com ARRAY
         System.out.println("----------------- LISTA -----------------");
         List<String> ninjasList = new ArrayList<>();
-        ninjasList.add("Naruto Uzumaki");
-        ninjasList.add("Sasuke Uchiha");
-        ninjasList.add("Sakura Haruno");
-        System.out.println("Minha Lista: " + ninjasList);
+
 
         // Stack
-        // O ultimo elemento que entra é, obrigatoriamente, o primeiro a sair
+        // O ultimo elemento que entra é, obrigatoriamente, o primeiro a sair - LIFO (Last In First Out)
         // Stack é importante para Ordenação
         System.out.println("----------------- STACK -----------------");
         Stack<String> ninjasStack = new Stack<>();
         ninjasStack.push("Naruto Uzumaki");
-        ninjasStack.push("Sasuke Uchiha");
-        ninjasStack.push("Sakura Haruno");
-        System.out.println("Minha Stack Atual: " + ninjasStack);
-        ninjasStack.pop();
-        System.out.println("Minha Stack Atual com Pop: " + ninjasStack);
-        System.out.println("Minha Stack Atual com o próximo elemento do topo: " + ninjasStack.peek());
-        System.out.println("Tamanho da Stack: " + ninjasStack.size() + " elementos.");
+        ninjasStack.push("Sakura");
+        ninjasStack.push("Sasuke");
+        System.out.println("Ninjas na Stack: " + ninjasStack);
 
+        // Queue - Filas (FIFO - First In First Out)
+        // Atenção: não dá para deletar o TAIL
+        System.out.println("----------------- QUEUE -----------------");
+        Queue<String> ninjasQueue = new LinkedList<>();
+        ninjasQueue.add("Naruto Uzumaki");
+        ninjasQueue.add("Sasuke Uchiha");
+        ninjasQueue.add("Sakura");
+        ninjasQueue.add("Kakashi");
+        ninjasQueue.add("Shikamaru");
 
+        // Mostrar a fila
+        System.out.println("Ninjas na Fila: " + ninjasQueue);
 
+        //Tirar um ninja da Queue
+        ninjasQueue.poll();
+        System.out.println("Ninjas na Fila depois do Poll: " + ninjasQueue);
 
+        // Como ver quem é o HEAD(primeiro)
+        ninjasQueue.peek();
+        System.out.println("Ninja no HEAD: " + ninjasQueue.peek());
+
+        // Esvaziar fila
+        ninjasQueue.poll();
+        ninjasQueue.poll();
+        System.out.println("Ninjas na Fila: " + ninjasQueue);
+
+        // Verificar se a fila está vazia
+        if (ninjasQueue.isEmpty()) {
+            System.out.println("A fila está Vazia.");
+        } else {
+            System.out.println("Ninjas ainda na Fila:" + ninjasQueue);
+        }
 
     }
 }
