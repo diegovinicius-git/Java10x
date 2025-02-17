@@ -1,5 +1,7 @@
 package Intermediario.LinkedList;
 
+import java.io.BufferedInputStream;
+import java.io.InputStreamReader;
 import java.util.*;
 
 public class Main {
@@ -16,8 +18,6 @@ public class Main {
 
         linkedList.add("Naruto");
         System.out.println(linkedList);
-
-        System.out.println("Hello, World");
 
 
     }
