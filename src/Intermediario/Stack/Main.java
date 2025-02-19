@@ -16,9 +16,13 @@ public class Main {
         // A lista é um pouco mais lenta em comparação com ARRAY
         System.out.println("----------------- LISTA -----------------");
         List<String> ninjasList = new ArrayList<>();
+        ninjasList.add("Naruto Uzumaki");
+        ninjasList.add("Sasuke Uchiha");
+        ninjasList.add("Sakura Haruno");
+        System.out.println(ninjasList);
 
 
-        // Stack
+        // Stack - é como uma pilha de objetos
         // O ultimo elemento que entra é, obrigatoriamente, o primeiro a sair - LIFO (Last In First Out)
         // Stack é importante para Ordenação
         System.out.println("----------------- STACK -----------------");
@@ -27,6 +31,8 @@ public class Main {
         ninjasStack.push("Sakura");
         ninjasStack.push("Sasuke");
         System.out.println("Ninjas na Stack: " + ninjasStack);
+        ninjasStack.pop();
+        System.out.println("Ninjas na Stack depois do pop: " + ninjasStack);
 
         // Queue - Filas (FIFO - First In First Out)
         // Atenção: não dá para deletar o TAIL
