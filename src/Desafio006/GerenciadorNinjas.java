@@ -27,13 +27,6 @@ public class GerenciadorNinjas {
         }
     }
 
-    // Acessar
-    public void acessNinja() {
-        for (int i = 0; i < lista.size(); i++) {
-            lista.get(lista.indexOf(i));
-        }
-    }
-
     // Exibir ninjas
     public void displayNinja() {
         if (lista.isEmpty()) {
